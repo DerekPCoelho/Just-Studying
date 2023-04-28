@@ -27,20 +27,20 @@ Selecione a operação que deseja executar:
     opção = int(input('Opção: '))
     if opção == 1: 
         tk = t + 273
-        print(f'Esta temperatura equivale a : {tk:.2f}ºK')
+        print(f'Esta temperatura equivale a : {tk:.0f}ºK')
     elif opção == 2:    
         tf = (t * 1.8) + 32
-        print(f'Esta temperatura equivale a : {tf:.2f}ºF')
+        print(f'Esta temperatura equivale a : {tf:.0f}ºF')
     elif opção == 3:   
         tc = t - 273
-        print(f'Esta temperatura equivale a : {tc:.2f}ºC')
+        print(f'Esta temperatura equivale a : {tc:.0f}ºC')
     elif opção == 5:   
         tf = 1.8 * (t - 273) + 32.
-        print(f'Esta temperatura equivale a : {tf:.2f}ºF')
+        print(f'Esta temperatura equivale a : {tf:.0f}ºF')
     elif opção == 4:    
         tc = (t - 32) * (5/9)
-        print(f'Esta temperatura equivale a : {tc:.2f}ºC')
+        print(f'Esta temperatura equivale a : {tc:.0f}ºC')
     elif opção == 6:
         tk = (t + 459.67) * (5/9)
-        print(f'Esta temperatura equivale a : {tk:.2f}ºK')
-
+        print(f'Esta temperatura equivale a : {tk:.0f}ºK')
+print('PROGRAAMA FINALIZADO...')
