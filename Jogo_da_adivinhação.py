@@ -1,8 +1,16 @@
 from random import randint
-
-n = int(input('Tente adivinhar o numero que estou pensando de zero a dez...'))
-numero_sorteado = randint(0, 10)
-if n == numero_sorteado:
-    print('Você acertou!! o numero que eu pensei é o {}'.format(numero_sorteado))
-else:
-    print('Mais sorte na proxima vez! o numero era {}'.format(numero_sorteado)) 
+computador = randint(0, 100)
+print('Consegue adivinhar em qual numero eu estou pensando?')
+certo = False
+palpites = 0
+while not certo:
+    jogador = int(input('tente a sorte! digite um numero de 0 a 100 '))
+    palpites += 1
+    if jogador == computador:
+        certo = True
+    else:
+        if jogador < computador:
+            print('um pouco mais...tente novamente!')
+        elif jogador > computador:
+            print('um pouco menos...tente novamente!')
+print('parabens!!! você descobriu com um total de {} palpites!!!'.format(palpites))

@@ -1,16 +1,27 @@
 from random import randint
-resposta = str(input('Par ou ímpar??')).strip().upper()
-nj = int(input('Digite um numero de um a dez: '))
-nc = randint(0, 10)
-calculo = nj + nc
-resultado = calculo % 2
-resposta_final = calculo
-if resultado == 0:
-    resposta_final = 'PAR'
-else:
-    resposta_final = 'IMPAR'
-
-if resposta == resposta_final:
-    print('Droga! voce venceu! escolhi o numero {} e o resultado foi {} parabens!'.format(nc, resposta_final))
-else:
-    print('voce perdeu! escolhi o numero {} e o resultado deu {}'.format(nc, resposta_final))
+v = 0
+while True:
+    jogador = int(input('\nDigite um valor'))
+    computador = randint(0, 10)
+    total = jogador + computador 
+    tipo = ''
+    while tipo not in'PI':
+        tipo = str(input(' \nPar ou Impar? [P/I] ')).strip().upper()[0]
+    print(f'\nVocê escolheu {jogador} e eu {computador}. o total é {total} ', end = '')
+    print('\nDeu Par !!' if total % 2 == 0 else 'Deu Impar!!')
+    if tipo =='P':
+        if total % 2 == 0:
+            print('\nVocê me venceu!!')
+            v += 1
+        else:
+            print('\n HA HA HA ! Você perdeu!!!')
+            break
+    elif tipo == 'I':
+        if total % 2 == 0:
+            print('\nVocê me venceu!!')
+            v += 1
+        else:
+            print('\n HA HA HA ! Você perdeu!!!')
+            break
+    print('\nNão aceito isso! vamos de novo!')
+    

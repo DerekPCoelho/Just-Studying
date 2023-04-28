@@ -1,6 +1,0 @@
-nome = str(input('digite seu nome completo: ')).strip()
-print('maiusculas: {}'.format(nome.upper()))
-print('Minusculas: {}'.format(nome.lower()))
-print('Numero de letras: {}'.format(len(nome) - nome.count(' ')))
-separa = nome.split()
-print('primeiro nome: {}, tem {} letras.'.format(separa[0], len(separa[0])))
